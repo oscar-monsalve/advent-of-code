@@ -1,7 +1,7 @@
-with open("input", "r") as file:
+left = []
+right = []
 
-    left = []
-    right = []
+with open("day1.input", "r") as file:
 
     for i in file:
         i = i.rsplit()
@@ -10,15 +10,15 @@ with open("input", "r") as file:
         left.sort()
         right.sort()
 
-    sum_diff = 0  # for part 1
-    similarity_num = 0  # for part 2
+sum_diff = 0  # for part 1
+similarity_num = 0  # for part 2
 
-    for i, k in zip(left, right):  # for part 1
-        diff = abs(i - k)  # for part 1
-        sum_diff += diff  # for part 1
-        for j in right:  # for part 2
-            if i == j:
-                similarity_num += j
+for i, k in zip(left, right):  # for part 1
+    diff = abs(i - k)  # for part 1
+    sum_diff += diff  # for part 1
+    for j in right:  # for part 2
+        if i == j:
+            similarity_num += j
 
-    print(f"part 1 answer: {sum_diff}")
-    print(f"part 2 answer: {similarity_num}")
+print(f"part 1 answer: {sum_diff}")
+print(f"part 2 answer: {similarity_num}")
