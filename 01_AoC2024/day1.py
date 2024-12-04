@@ -2,7 +2,6 @@ left = []
 right = []
 
 with open("day1.input", "r") as file:
-
     for i in file:
         i = i.rsplit()
         left.append(int(i[0]))
