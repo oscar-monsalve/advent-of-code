@@ -1,4 +1,7 @@
-from numpy import sign
+# Implemented sign function for part 2. Didn't want to use numpy
+def sign(x: float) -> int:
+    return (x > 0) - (x < 0)
+
 
 instructions = []
 with open("01_day1_input.txt", "r") as file:
@@ -15,7 +18,7 @@ for i in instructions:
     for j in range(1, abs(i) + 1):
         current_dial = (current_dial + (1 * sign(i))) % 100
         if j == abs(i):
-            dial_results.append(int(current_dial))  # added int to convert from numpy int to int
+            dial_results.append(current_dial)
         if current_dial == 0:
             count_dial_points_zero += 1
 
