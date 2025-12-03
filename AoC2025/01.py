@@ -4,7 +4,7 @@ def sign(x: float) -> int:
 
 
 instructions = []
-with open("01_day1_input.txt", "r") as file:
+with open("01_input.txt", "r") as file:
     for i in file:
         i = i.split()
         for data in i:
@@ -22,5 +22,5 @@ for i in instructions:
         if current_dial == 0:
             count_dial_points_zero += 1
 
-print(dial_results)
+# print(dial_results)
 print(f"Number of dials at zero: {count_dial_points_zero}")
